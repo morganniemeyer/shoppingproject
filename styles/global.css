@@ -105,7 +105,9 @@ input {
 }
 
 .list {
-    display: flex;
+    display: grid;
     justify-content: center;
-    padding: 10px;
+    padding: 15px;
+    font-size: large;
+    text-transform: capitalize;
 }
