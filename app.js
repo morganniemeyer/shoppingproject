@@ -1,12 +1,13 @@
 /* Imports */
 // this will check if we have a user and set signout link if it exists
 import './auth/user.js';
-import { addListItem, retrieveList, buyTheThing, clearBought } from './fetch-utils.js';
+import { addListItem, retrieveList, buyTheThing, clearBought, clearAll } from './fetch-utils.js';
 
 /* Get DOM Elements */
 const form = document.getElementById('add-new');
 const bigList = document.getElementById('list');
 const clearButton = document.getElementById('clear');
+const clearBigButton = document.getElementById('clearall');
 
 /* State */
 
@@ -27,6 +28,12 @@ form.addEventListener('submit', async (e) => {
 
 clearButton.addEventListener('click', async () => {
     await clearBought();
+    showList();
+});
+
+clearBigButton.addEventListener('click', async () => {
+    console.log('click');
+    await clearAll();
     showList();
 });
 

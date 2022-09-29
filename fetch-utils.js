@@ -53,3 +53,8 @@ export async function clearBought() {
 
     return response;
 }
+
+export async function clearAll() {
+    const user = getUser();
+    return await client.from('shopping-list').delete().eq('user_id', user.id);
+}

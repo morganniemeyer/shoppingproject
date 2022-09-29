@@ -42,15 +42,16 @@
             <form class="add-new" id="add-new">
                 <label>
                     Amount:
-                    <input type="number" name="quantity" min="0" />
+                    <input type="number" name="quantity" min="0" required />
                 </label>
                 <label>
                     Item:
-                    <input type="text" name="item" />
+                    <input type="text" name="item" required />
                 </label>
                 <button>Add to List</button>
             </form>
             <button class="clear" id="clear">Clear All Bought Items</button>
+            <button class="clear" id="clearall">Clear ALL Items</button>
             <ul class="list" id="list"></ul>
         </main>
     </body>
