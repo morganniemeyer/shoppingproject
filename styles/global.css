@@ -59,6 +59,9 @@ body {
 
 main {
     padding: 20px;
+    display: grid;
+    grid-template-rows: 100px 30px 40px auto;
+    justify-items: center;
 }
 
 .avatar {
@@ -88,8 +91,10 @@ main {
     justify-content: center;
     align-items: center;
     gap: 5px;
+    width: 1000px;
+    height: 90px;
 }
-form button {
+button {
     padding: 10px;
     background: var(--action-color);
     border: 0;
@@ -105,8 +110,9 @@ input {
 }
 
 .list {
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     padding: 15px;
     font-size: large;
     text-transform: capitalize;
@@ -114,4 +120,11 @@ input {
 
 .bought {
     text-decoration: line-through;
+}
+
+.clear {
+    height: 35px;
+    width: 175px;
+    display: flex;
+    justify-content: center;
 }
