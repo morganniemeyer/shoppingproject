@@ -32,7 +32,6 @@ clearButton.addEventListener('click', async () => {
 });
 
 clearBigButton.addEventListener('click', async () => {
-    console.log('click');
     await clearAll();
     showList();
 });
