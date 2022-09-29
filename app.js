@@ -1,19 +1,16 @@
 /* Imports */
 // this will check if we have a user and set signout link if it exists
 import './auth/user.js';
-import { addListItem, retrieveList, buyTheThing } from './fetch-utils.js';
+import { addListItem, retrieveList, buyTheThing, clearBought } from './fetch-utils.js';
 
 /* Get DOM Elements */
 const form = document.getElementById('add-new');
 const bigList = document.getElementById('list');
-const errorDisplay = document.getElementById('error-display');
+const clearButton = document.getElementById('clear');
 
 /* State */
-let error = null;
 
 /* Events */
-
-/* Display Functions */
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -27,6 +24,13 @@ form.addEventListener('submit', async (e) => {
     form.reset();
     await showList();
 });
+
+clearButton.addEventListener('click', async () => {
+    await clearBought();
+    showList();
+});
+
+/* Display Functions */
 
 async function showList() {
     const response = await retrieveList();
@@ -49,14 +53,6 @@ async function showList() {
         });
 
         bigList.append(listItemEl);
-    }
-}
-
-export function displayError() {
-    if (error) {
-        errorDisplay.textContent = error.message;
-    } else {
-        errorDisplay.textContent = '';
     }
 }
 

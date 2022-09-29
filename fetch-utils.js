@@ -47,3 +47,9 @@ export async function buyTheThing(someId) {
 
     return response;
 }
+
+export async function clearBought() {
+    const response = await client.from('shopping-list').delete().eq('bought', true);
+
+    return response;
+}

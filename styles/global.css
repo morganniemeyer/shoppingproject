@@ -60,7 +60,7 @@ body {
 main {
     padding: 20px;
     display: grid;
-    grid-template-rows: 100px 30px 40px auto;
+    grid-template-rows: 100px 40px auto;
     justify-items: center;
 }
 
