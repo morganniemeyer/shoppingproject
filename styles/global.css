@@ -111,3 +111,7 @@ input {
     font-size: large;
     text-transform: capitalize;
 }
+
+.bought {
+    text-decoration: line-through;
+}

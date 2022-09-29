@@ -38,3 +38,12 @@ export async function retrieveList() {
     const response = await client.from('shopping-list').select();
     return response;
 }
+
+export async function buyTheThing(someId) {
+    const response = await client
+        .from('shopping-list')
+        .update({ bought: true })
+        .match({ id: someId });
+
+    return response;
+}
