@@ -1,11 +1,19 @@
+/* CSS HEX 
+--misty-rose: #efd0caff;
+--pale-silver: #c1bcacff;
+--artichoke: #979b8dff;
+--fern-green: #5c7457ff;
+--brunswick-green: #214e34ff;
+offset-color: rgb(217, 236, 217); */
+
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
-    --text-color: rgb(7, 5, 68);
+    --background: #979b8dff;
+    --header-background: #c1bcacff;
+    --text-color: #214e34;
     --label-color: rgb(75, 102, 98);
     --placeholder-color: rgb(136, 136, 153);
     --offset-color: rgb(217, 236, 217);
-    --action-color: rgb(77, 132, 252);
+    --action-color: #efd0caff;
 
     --primary-font: 'Rubik', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
         'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
@@ -68,4 +76,36 @@ main {
 
 .hidden {
     display: none;
+}
+
+.add-new {
+    border: 6px solid;
+    background: var(--offset-color);
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+form button {
+    padding: 10px;
+    background: var(--action-color);
+    border: 0;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+}
+
+input {
+    background-color: rgb(232, 240, 254);
+    border: 1px solid #214e34ff;
+    border-radius: 3px;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
